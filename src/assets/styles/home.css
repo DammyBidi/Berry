@@ -24,13 +24,14 @@
 .hero-content h1 {
   font-size: 6rem;
   text-align: center;
-  color: #ffffff;
+  color: #A1A1A1;
+  text-shadow: 8px 8px 20px rgba(0, 0, 0, 0.64);
 }
 
 .hero-content p {
   font-size: 1.5rem;
   text-align: center;
-  color: #c0c0c0;
+  color: #ffff;
   width: 55rem;
 }
 
@@ -182,7 +183,12 @@
   font-weight: 500;
   line-height: normal;
   letter-spacing: -0.04rem;
-  margin-right: 1.86rem;
+}
+
+.first-section .text .second div {
+  display: flex;
+  gap: 1.5rem;
+  
 }
 
 .blue {
