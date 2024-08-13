@@ -151,7 +151,7 @@
       </div>
       <div class="social-links">
         <div>
-          <img src="../assets/images/whatsapp-logo.svg" alt="whatsapp-logo" />
+          <img src="../assets/images/whatsApp-logo.svg" alt="whatsapp-logo" />
           <p>+123 456 7890</p>
         </div>
         <div>
