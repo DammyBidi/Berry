@@ -1,11 +1,18 @@
 <template>
   <div class="home">
     <div class="hero-section">
+      <!-- <div class="mobile-nav">
+        <div>
+          <img src="../assets/images/Logo.svg" alt="logo" />
+          <p>Berry</p>
+        </div>
+        <div>
+          <img src="../assets/images/hamburger.svg" alt="hamburger" />
+        </div>
+      </div> -->
+      <MobileNav />
       <div class="hero-content">
-        <h1>
-          Explore our <br />
-          endless thrills
-        </h1>
+        <h1>Explore our endless thrills</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur. Arcu ornare ipsum metus
           elementum est euismod pulvinar.Lorem ipsum dolor sit amet consectetur.
@@ -89,12 +96,9 @@
 
     <!--Third Section -->
     <div class="third-section">
-      <h1>
-        Everything You Need For The Perfect <br />
-        Gaming Experience
-      </h1>
+      <h1>Everything You Need For The Perfect Gaming Experience</h1>
       <p>
-        Lorem ipsum dolor sit amet consectetur. Arcu ornare ipsum metus <br />
+        Lorem ipsum dolor sit amet consectetur. Arcu ornare ipsum metus
         elementum est euismod pulvinar.
       </p>
     </div>
@@ -138,6 +142,9 @@
       <div class="image">
         <img src="../assets/images/VRimage.svg" alt="VRimage" />
       </div>
+      <div class="mobile-image">
+        <img src="../assets/images/Mobile-VRimage.svg" alt="" />
+      </div>
     </div>
 
     <!-- Footer -->
@@ -145,7 +152,7 @@
       <div class="text">
         <h1>Get in touch</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur. Arcu ornare ipsum metus <br />
+          Lorem ipsum dolor sit amet consectetur. Arcu ornare ipsum metus
           elementum est euismod pulvinar.
         </p>
       </div>
@@ -181,12 +188,29 @@
             <p>Contact</p>
           </div>
         </div>
+        <div class="mobile-footer-bottom">
+          <div>
+            <img src="../assets/images/Logo.svg" alt="logo" />
+            <h1>Berry</h1>
+          </div>
+          <div class="footer-bottom-link">
+            <div>
+              <p>Home</p>
+              <p>Services</p>
+              <p>Contact</p>
+            </div>
+            <p>©copyright 2024</p>
+          </div>
+        </div>
       </div>
     </footer>
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import MobileNav from '@/components/MobileNav.vue'; 
+
+</script>
 
 <style scoped>
 @import "../assets/styles/home.css";
