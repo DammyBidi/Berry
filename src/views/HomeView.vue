@@ -61,6 +61,14 @@
             <button>Super Power Computers</button>
           </div>
         </div>
+
+        <div class="mobile-second" ref="mobileSecondContainer">
+          <button>Super Power Computers</button>
+          <button class="blue">Gaming Pad</button>
+          <button>Super Power Computers</button>
+          <button>Perfect Sitting Area</button>
+          <button>Cool Gadgets</button>
+        </div>
       </div>
 
       <div class="image-container" ref="firstImageContainer">
@@ -215,6 +223,7 @@ import MobileNav from '@/components/MobileNav.vue';
 // References for the image containers
 const firstImageContainer = ref<HTMLElement | null>(null);
 const secondImageContainer = ref<HTMLElement | null>(null);
+  const mobileSecondContainer = ref<HTMLElement | null>(null);
 
 const startContinuousScrolling = (container: HTMLElement, direction: 'left' | 'right' = 'left') => {
   const scrollSpeed = 1; 
@@ -250,6 +259,10 @@ onMounted(() => {
   if (secondImageContainer.value) {
     startContinuousScrolling(secondImageContainer.value, 'right');
   } 
+
+  if (mobileSecondContainer.value) {
+    startContinuousScrolling(mobileSecondContainer.value, 'right');
+  }
 });
 </script>
 

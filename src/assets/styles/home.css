@@ -159,6 +159,10 @@
   width: 55%;
 }
 
+.first-section .text .mobile-second {
+  display: none;
+}
+
 .first-section .text .first h2 {
   font-size: 2.5rem;
   color: #e8e7e7;
@@ -183,7 +187,7 @@
   backdrop-filter: blur(7.5px);
   border: none;
   padding: 1rem 1.5rem;
-  color: var(--M3-sys-light-on-primary, #fff);
+  color: #fff;
   font-family: "Inconsolata", monospace;
   font-size: 1rem;
   font-style: normal;
@@ -565,10 +569,7 @@ footer .footer-bottom div:last-child p {
     text-align: left;
   }
 
-  .first-section .text .second {
-    width: 100%;
-  }
-
+  
   .first-section .text .first h2 {
     font-size: 2rem;
   }
@@ -578,6 +579,40 @@ footer .footer-bottom div:last-child p {
   }
 
   .first-section .text .second {
+    display: none;
+  }
+
+  .first-section .text .mobile-second {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+    /* padding: 0 1rem; */
+    overflow: hidden;
+    overflow-x: hidden; 
+    /* white-space: nowrap; */
+  }
+
+  .first-section .text .mobile-second button {
+  
+    border-radius: 1.25rem;
+    background: rgba(86, 99, 220, 0.1);
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(7.5px);
+    border: none;
+    padding: 1rem 1.5rem;
+    color: #fff;
+    font-family: "Inconsolata", monospace;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.04rem;
+    width: 10rem;
+    flex: 0 0 auto;
+    
+  }
+
+  /* .first-section .text .second {
     flex-direction: row-reverse;
     gap: 1rem;
   }
@@ -589,7 +624,7 @@ footer .footer-bottom div:last-child p {
 
   .first-section .text .second div {
     gap: 1rem;
-  }
+  } */
 
   .first-section .image-container,
   .second-section .image-container {
