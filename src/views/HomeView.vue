@@ -33,7 +33,8 @@
           <p>Home</p>
         </div>
         <div class="about">
-          <img src="../assets/images/UsersThree.svg" alt="" />
+          <router-link to="/about"><img src="../assets/images/UsersThree.svg" alt="" /></router-link>
+          <!-- <img src="../assets/images/UsersThree.svg" alt="" /> -->
         </div>
       </div>
     </div>
@@ -62,7 +63,7 @@
         </div>
       </div>
 
-      <div class="image-container">
+      <div class="image-container" ref="firstImageContainer">
         <img src="../assets/images/choose1.svg" alt="" />
         <img src="../assets/images/choose2.svg" alt="" />
         <img src="../assets/images/choose3.svg" alt="" />
@@ -73,7 +74,7 @@
 
     <!--Second Section -->
 
-    <div class="second-section">
+    <div class="second-section" >
       <div class="text">
         <h1>
           Experience the lorem ipsum <br />
@@ -85,7 +86,7 @@
         </div>
       </div>
 
-      <div class="image-container">
+      <div class="image-container" ref="secondImageContainer">
         <img src="../assets/images/experience1.svg" alt="" />
         <img src="../assets/images/experience2.svg" alt="" />
         <img src="../assets/images/experience3.svg" alt="" />
@@ -208,8 +209,48 @@
 </template>
 
 <script setup lang="ts">
-import MobileNav from '@/components/MobileNav.vue'; 
+import { ref, onMounted } from 'vue';
+import MobileNav from '@/components/MobileNav.vue';
 
+// References for the image containers
+const firstImageContainer = ref<HTMLElement | null>(null);
+const secondImageContainer = ref<HTMLElement | null>(null);
+
+const startContinuousScrolling = (container: HTMLElement, direction: 'left' | 'right' = 'left') => {
+  const scrollSpeed = 1; 
+
+  
+  const content = container.innerHTML;
+  container.innerHTML += content;
+
+  const scroll = () => {
+    if (direction === 'left') {
+      container.scrollLeft += scrollSpeed;
+      if (container.scrollLeft >= container.scrollWidth / 2) {
+        container.scrollLeft = 0;
+      }
+    } else {
+      container.scrollLeft -= scrollSpeed;
+      if (container.scrollLeft <= 0) {
+        container.scrollLeft = container.scrollWidth / 2;
+      }
+    }
+
+    requestAnimationFrame(scroll);
+  };
+
+  scroll();
+};
+
+onMounted(() => {
+  if (firstImageContainer.value) {
+    startContinuousScrolling(firstImageContainer.value, 'left');
+  } 
+
+  if (secondImageContainer.value) {
+    startContinuousScrolling(secondImageContainer.value, 'right');
+  } 
+});
 </script>
 
 <style scoped>
