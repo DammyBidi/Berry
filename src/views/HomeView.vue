@@ -1,16 +1,8 @@
 <template>
   <div class="home">
+    <MobileNav />
     <div class="hero-section">
-      <!-- <div class="mobile-nav">
-        <div>
-          <img src="../assets/images/Logo.svg" alt="logo" />
-          <p>Berry</p>
-        </div>
-        <div>
-          <img src="../assets/images/hamburger.svg" alt="hamburger" />
-        </div>
-      </div> -->
-      <MobileNav />
+      
       <div class="hero-content">
         <h1>Explore our endless thrills</h1>
         <p>

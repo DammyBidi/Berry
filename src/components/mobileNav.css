@@ -2,13 +2,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 3rem;
-  /* position: fixed;
-  top: 20px;
+  /* margin-bottom: 3rem; */
+  background-image: url(../assets/images/navbg.svg);
+  
+  /* background-color: var(--black, #121212); */
+  z-index: 3;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  /* margin: 0 1rem; */
+  position: fixed;
+  right: 0;
   left: 0;
-  width: 100%;
-  padding: 0 1rem;
-  z-index: 4; */
  
 }
 
