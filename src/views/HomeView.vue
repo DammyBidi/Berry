@@ -2,7 +2,6 @@
   <div class="home">
     <MobileNav />
     <div class="hero-section">
-      
       <div class="hero-content">
         <h1>Explore our endless thrills</h1>
         <p>
@@ -20,13 +19,15 @@
           <img src="../assets/images/Logo.svg" alt="logo" />
           <p>Berry</p>
         </div>
-        <div class="home">
+        <div class="home-logo">
           <img src="../assets/images/HouseLine.svg" alt="house-logo" />
           <p>Home</p>
         </div>
-        <div class="about">
-          <router-link to="/about"><img src="../assets/images/UsersThree.svg" alt="" /></router-link>
-          <!-- <img src="../assets/images/UsersThree.svg" alt="" /> -->
+        <div class="about-logo">
+          <router-link to="/about"
+            ><img src="../assets/images/UsersThree.svg" alt=""
+          /></router-link>
+          <p>About</p>
         </div>
       </div>
     </div>
@@ -74,7 +75,7 @@
 
     <!--Second Section -->
 
-    <div class="second-section" >
+    <div class="second-section">
       <div class="text">
         <h1>
           Experience the lorem ipsum <br />
@@ -182,26 +183,30 @@
             <img src="../assets/images/Logo.svg" alt="logo" />
             <h1>Berry</h1>
           </div>
-          <p>©copyright 2024</p>
+          <p>
+            ©copyright 2024, designed by
+            <a target="_blank" href="http://www.hijoygirl.com">JoyGirl</a> and
+            developed by Dammy_Bidi
+          </p>
           <div>
             <p>Home</p>
             <p>Services</p>
             <p>Contact</p>
           </div>
         </div>
-        <div class="mobile-footer-bottom">
-          <div>
-            <img src="../assets/images/Logo.svg" alt="logo" />
-            <h1>Berry</h1>
-          </div>
-          <div class="footer-bottom-link">
+        <div class="mobile-footer-bottom-container">
+          <div class="mobile-footer-bottom">
             <div>
+              <img src="../assets/images/Logo.svg" alt="logo" />
+              <h1>Berry</h1>
+            </div>
+            <div class="footer-bottom-link">
               <p>Home</p>
               <p>Services</p>
               <p>Contact</p>
             </div>
-            <p>©copyright 2024</p>
           </div>
+          <p>©copyright 2024, designed by <a target="_blank" href="http://www.hijoygirl.com">JoyGirl</a> and developed by Dammy_Bidi</p>
         </div>
       </div>
     </footer>
@@ -209,23 +214,25 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
-import MobileNav from '@/components/MobileNav.vue';
+import { ref, onMounted } from "vue";
+import MobileNav from "@/components/MobileNav.vue";
 
 // References for the image containers
 const firstImageContainer = ref<HTMLElement | null>(null);
 const secondImageContainer = ref<HTMLElement | null>(null);
-  const mobileSecondContainer = ref<HTMLElement | null>(null);
+const mobileSecondContainer = ref<HTMLElement | null>(null);
 
-const startContinuousScrolling = (container: HTMLElement, direction: 'left' | 'right' = 'left') => {
-  const scrollSpeed = 1; 
+const startContinuousScrolling = (
+  container: HTMLElement,
+  direction: "left" | "right" = "left"
+) => {
+  const scrollSpeed = 1;
 
-  
   const content = container.innerHTML;
   container.innerHTML += content;
 
   const scroll = () => {
-    if (direction === 'left') {
+    if (direction === "left") {
       container.scrollLeft += scrollSpeed;
       if (container.scrollLeft >= container.scrollWidth / 2) {
         container.scrollLeft = 0;
@@ -245,15 +252,15 @@ const startContinuousScrolling = (container: HTMLElement, direction: 'left' | 'r
 
 onMounted(() => {
   if (firstImageContainer.value) {
-    startContinuousScrolling(firstImageContainer.value, 'left');
-  } 
+    startContinuousScrolling(firstImageContainer.value, "left");
+  }
 
   if (secondImageContainer.value) {
-    startContinuousScrolling(secondImageContainer.value, 'right');
-  } 
+    startContinuousScrolling(secondImageContainer.value, "right");
+  }
 
   if (mobileSecondContainer.value) {
-    startContinuousScrolling(mobileSecondContainer.value, 'right');
+    startContinuousScrolling(mobileSecondContainer.value, "right");
   }
 });
 </script>

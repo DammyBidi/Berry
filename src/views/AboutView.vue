@@ -16,17 +16,17 @@
           <img src="../assets/images/Logo.svg" alt="logo" />
           <p>Berry</p>
         </div>
-        <div class="home">
+        <div class="home-logo">
           <router-link to="/"
             ><img src="../assets/images/HouseLine.svg" alt="house-logo"
           /></router-link>
           <p>Home</p>
         </div>
-        <div class="about">
+        <div class="about-logo">
           <router-link to="/about"
             ><img src="../assets/images/UsersThree.svg" alt=""
           /></router-link>
-          <!-- <img src="../assets/images/UsersThree.svg" alt="" /> -->
+          <p>About</p>
         </div>
       </div>
     </div>
@@ -160,26 +160,26 @@
             <img src="../assets/images/Logo.svg" alt="logo" />
             <h1>Berry</h1>
           </div>
-          <p>©copyright 2024</p>
+          <p>©copyright 2024, designed by <a target="_blank" href="http://www.hijoygirl.com">JoyGirl</a> and developed by Dammy_Bidi</p>
           <div>
             <p>Home</p>
             <p>Services</p>
             <p>Contact</p>
           </div>
         </div>
-        <div class="mobile-footer-bottom">
-          <div>
-            <img src="../assets/images/Logo.svg" alt="logo" />
-            <h1>Berry</h1>
-          </div>
-          <div class="footer-bottom-link">
+        <div class="mobile-footer-bottom-container">
+          <div class="mobile-footer-bottom">
             <div>
+              <img src="../assets/images/Logo.svg" alt="logo" />
+              <h1>Berry</h1>
+            </div>
+            <div class="footer-bottom-link">
               <p>Home</p>
               <p>Services</p>
               <p>Contact</p>
             </div>
-            <p>©copyright 2024</p>
           </div>
+          <p>©copyright 2024, designed by <a target="_blank" href="http://www.hijoygirl.com">JoyGirl</a> and developed by Dammy_Bidi</p>
         </div>
       </div>
     </footer>
