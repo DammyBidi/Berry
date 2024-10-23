@@ -332,7 +332,9 @@
   align-items: center;
   gap: 2.5rem;
   justify-content: space-between;
-  margin: 0 5.5rem;
+  max-width: 1440px;
+  margin: 0 auto;
+  /* margin: 0 5.5rem; */
 }
 
 .fourth-section .card-container {
